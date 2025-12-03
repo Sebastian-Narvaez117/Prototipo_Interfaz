@@ -37,7 +37,7 @@ Primera interacción con nuevos usuarios, diseñada para hacer el proceso de reg
 - Aceptación de términos y condiciones
 - Opción de registro con redes sociales
 
-![Registro](Docs/img/Registro.png)
+![Registro](img/Registro.png)
 
 ---
 
