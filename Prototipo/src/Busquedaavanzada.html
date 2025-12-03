@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Búsqueda Avanzada Anime </title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#47cfeb",
+              "background-light": "#f6f8f8",
+              "background-dark": "#111e21",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light px-4 md:px-10 py-3 font-display bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-text-light-primary">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 12.236C39.9944 12.2537 39.9875 12.2845 39.9748 12.3294C39.9436 12.4399 39.8949 12.5741 39.8346 12.7175C39.8168 12.7597 39.7989 12.8007 39.7813 12.8398C38.5103 13.7113 35.9788 14.9393 33.7095 15.4811C30.9875 16.131 27.6413 16.5217 24 16.5217C20.3587 16.5217 17.0125 16.131 14.2905 15.4811C12.0012 14.9346 9.44505 13.6897 8.18538 12.8168C8.17384 12.7925 8.16216 12.767 8.15052 12.7408C8.09919 12.6249 8.05721 12.5114 8.02977 12.411C8.00356 12.3152 8.00039 12.2667 8.00004 12.2612C8.00004 12.261 8 12.2607 8.00004 12.2612C8.00004 12.2359 8.0104 11.9233 8.68485 11.3686C9.34546 10.8254 10.4222 10.2469 11.9291 9.72276C14.9242 8.68098 19.1919 8 24 8C28.8081 8 33.0758 8.68098 36.0709 9.72276C37.5778 10.2469 38.6545 10.8254 39.3151 11.3686C39.9006 11.8501 39.9857 12.1489 39.998 12.236ZM4.95178 15.2312L21.4543 41.6973C22.6288 43.5809 25.3712 43.5809 26.5457 41.6973L43.0534 15.223C43.0709 15.1948 43.0878 15.1662 43.104 15.1371L41.3563 14.1648C43.104 15.1371 43.1038 15.1374 43.104 15.1371L43.1051 15.135L43.1065 15.1325L43.1101 15.1261L43.1199 15.1082C43.1276 15.094 43.1377 15.0754 43.1497 15.0527C43.1738 15.0075 43.2062 14.9455 43.244 14.8701C43.319 14.7208 43.4196 14.511 43.5217 14.2683C43.6901 13.8679 44 13.0689 44 12.2609C44 10.5573 43.003 9.22254 41.8558 8.2791C40.6947 7.32427 39.1354 6.55361 37.385 5.94477C33.8654 4.72057 29.133 4 24 4C18.867 4 14.1346 4.72057 10.615 5.94478C8.86463 6.55361 7.30529 7.32428 6.14419 8.27911C4.99695 9.22255 3.99999 10.5573 3.99999 12.2609C3.99999 13.1275 4.29264 13.9078 4.49321 14.3607C4.60375 14.6102 4.71348 14.8196 4.79687 14.9689C4.83898 15.0444 4.87547 15.1065 4.9035 15.1529C4.91754 15.1762 4.92954 15.1957 4.93916 15.2111L4.94662 15.223L4.95178 15.2312ZM35.9868 18.996L24 38.22L12.0131 18.996C12.4661 19.1391 12.9179 19.2658 13.3617 19.3718C16.4281 20.1039 20.0901 20.5217 24 20.5217C27.9099 20.5217 31.5719 20.1039 34.6383 19.3718C35.082 19.2658 35.5339 19.1391 35.9868 18.996Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<a href="Inicio.html">
+<h2 class="text-text-light-primary text-lg font-bold leading-tight tracking-[-0.015em]">Anime Library</h2>
+</a>
+</div>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-text-light-primary text-sm font-medium leading-normal" href="Inicio.html">Inicio</a>
+<a class="text-text-light-primary text-sm font-medium leading-normal" href="Catalogo.html">Explorar</a>
+<a class="text-text-light-primary text-sm font-medium leading-normal" href="Librosguardados.html">Mi Biblioteca</a>
+<button id="themeToggle" 
+        class="flex items-center justify-center size-10 rounded-full cursor-pointer transition-all hover:opacity-80">
+    <!-- ICONO SOL -->
+    <svg id="iconSun" class="w-6 h-6 text-yellow-500 block dark:hidden" 
+         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.364 6.364l1.414 1.414M4.222 4.222l1.414 1.414m0 12.728L4.222 19.778m14.142-14.142l-1.414 1.414M12 6a6 6 0 100 12 6 6 0 000-12z"/>
+    </svg>
+
+    <!-- ICONO LUNA -->
+    <svg id="iconMoon" class="w-6 h-6 text-white hidden dark:block" 
+         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path 
+         d="M21 12.79A9 9 0 1111.21 3a7 7 0 1010.58 9.79z"/>
+    </svg>
+</button>
+</div>
+</div>
+
+</header>
+<main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-wrap justify-between gap-3 p-4 mb-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-text-light-primary text-4xl font-black leading-tight tracking-[-0.033em]">Búsqueda Avanzada</p>
+<p class="text-text-light-secondary text-base font-normal leading-normal">Encuentra tu próximo manga o novela ligera favorita.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<aside class="lg:col-span-1">
+<div class="sticky top-28 bg-surface-light rounded-xl border border-border-light p-4">
+<h2 class="text-text-light-primary text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-1">Filtros de Búsqueda</h2>
+<div class="py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-light-secondary flex border-r-0 bg-background-light items-center justify-center pl-4 rounded-l-lg border border-border-light">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light-primary focus:outline-0 focus:ring-2 focus:ring-primary/50 border bg-background-light border-border-light h-full placeholder:text-text-light-secondary px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Buscar por título, autor..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-col py-2 gap-3">
+<details class="flex flex-col rounded-lg border border-border-light bg-transparent px-[15px] py-[7px] group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-light-primary text-sm font-medium leading-normal">Género</p>
+<div class="text-text-light-primary group-open:rotate-180 transition-transform">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</summary>
+<div class="space-y-2 py-2">
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox bg-transparent border-gray-400 rounded text-primary focus:ring-primary/50" type="checkbox"/> <span class="text-text-light-secondary text-sm">Aventura</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input checked="" class="form-checkbox bg-transparent border-gray-400 rounded text-primary focus:ring-primary/50" type="checkbox"/> <span class="text-text-light-secondary text-sm">Shonen</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox bg-transparent border-gray-400 rounded text-primary focus:ring-primary/50" type="checkbox"/> <span class="text-text-light-secondary text-sm">Isekai</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox bg-transparent border-gray-400 rounded text-primary focus:ring-primary/50" type="checkbox"/> <span class="text-text-light-secondary text-sm">Mecha</span></label>
+</div>
+</details>
+<details class="flex flex-col rounded-lg border border-border-light bg-transparent px-[15px] py-[7px] group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-light-primary text-sm font-medium leading-normal">Autor</p>
+<div class="text-text-light-primary group-open:rotate-180 transition-transform">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</summary>
+<div class="py-2">
+<p class="text-text-light-secondary text-sm font-normal leading-normal pb-2">Buscar por nombre de autor.</p>
+</div>
+</details>
+<details class="flex flex-col rounded-lg border border-border-light bg-transparent px-[15px] py-[7px] group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-light-primary text-sm font-medium leading-normal">Año de Publicación</p>
+<div class="text-text-light-primary group-open:rotate-180 transition-transform">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</summary>
+<div class="py-2">
+<p class="text-text-light-secondary text-sm font-normal leading-normal pb-2">Seleccionar un rango de años.</p>
+</div>
+</details>
+</div>
+<div class="pt-4">
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Aplicar Filtros</span>
+</button>
+</div>
+</div>
+</aside>
+<section class="lg:col-span-3">
+<div class="mb-6 px-4">
+<p class="text-text-light-secondary">Mostrando 12 resultados para <span class="font-bold text-primary">'Shonen'</span></p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<div class="bg-surface-light border border-border-light rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 hover:border-primary/30">
+<div class="aspect-[2/3] bg-cover bg-center" data-alt="Cover of One Piece Manga Volume 1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWjZLpn2RXiTCZc-ZwrzlxT7jQ9z6J6YT7-87_FWs6MFBMrSK0SJZlYP1AzHlwZUUTKbi1GHr_PLygslvycZLYhdjaW7_MvCHH4RRIjdQKiLlgSvIL6VkbBrha_dHnauaylOP9wfM-c54WUpAbWN5uylQn9sRUuoEN7FyXset4xQUg43BoFroNryEAT7sut9EGQrE24DBeqAXnWMV-5wGbGkCoX0o4s5BIqVAj_8fg3it2w-sO3hpYGjDi0UVt46buJ_geFRNN6lk');"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-text-light-primary truncate group-hover:text-primary">One Piece</h3>
+<p class="text-sm text-text-light-secondary">Eiichiro Oda</p>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Aventura</span>
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Shonen</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-light border border-border-light rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 hover:border-primary/30">
+<div class="aspect-[2/3] bg-cover bg-center" data-alt="Cover of Jujutsu Kaisen Manga Volume 1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_JM9PbkWozkab3xCvfLvEownBsW9R2mgM28f-Oy6r0ZvzLRii_xvh7fcMr3prMtizAl8Xc-CGN6unkG73dowmzYMkyeqhzIMQda4oh_QgO3CXMd93JfoxifxiHUvZHI3DNg3tQYlsnfa26J_-6iHw_zhyjc-tXgBjNQ7IaObdbVbutRL-VlBvuni5Yt_1ubixYRTv5k0pXNw3btbYZrv7oMx0tnOW7PmR31kEhO7pNmBUxrNb7D-U3qNwxSTi8TMDrxdpbZG-z9Y');"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-text-light-primary truncate group-hover:text-primary">Jujutsu Kaisen</h3>
+<p class="text-sm text-text-light-secondary">Gege Akutami</p>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Shonen</span>
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Sobrenatural</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-light border border-border-light rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 hover:border-primary/30">
+<div class="aspect-[2/3] bg-cover bg-center" data-alt="Cover of Chainsaw Man Manga Volume 1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1mJKN92rCWvhf40LRRda8RTmSlQisojZM3oxNp5PynU9Ku8gOOdNlDxrrUGa8KD_wLeKgjIkgadyYwyMVMui83g5E26KJoCdXpJSx3PfF_tabAz1SJXmkkxk8S0qsFmPLoKwYUo4c7BXJYAWTjdf9rKcIwTzRYGm3OZ5T-PtNVOKHOoeGU_aE_9KvrH64oKYtyo1Qxp3h5JZG_wptN_oHTR7LZSOWqgLKriEvdPr6ntxa7uMREn5ejhg7MdrWIAavGlFJq8OrO88');"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-text-light-primary truncate group-hover:text-primary">Chainsaw Man</h3>
+<p class="text-sm text-text-light-secondary">Tatsuki Fujimoto</p>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Acción</span>
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Shonen</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-light border border-border-light rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 hover:border-primary/30">
+<div class="aspect-[2/3] bg-cover bg-center" data-alt="Cover of My Hero Academia Manga Volume 1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDk_LqYczgxG-fhzfhF16RrORtDZAbZe7ozyXb6qj7Maz_X5ZvvxjST-HIgDTXGZBZxIjBYyynh9VLUwsC-SSgSDZkLwnY648u4dD77rLCcld2NzrX2DBXG6ivfbwA-hLQ1kliqw2BCPDgW7DVaR8zMhDmOiSzqje52AZfxNtUkm_vryGf6DYL_dG7lASYM48ybWcvVJPZuWkJxB3bor21sHArG9rCxRZd3-NQDw2bsKd2_aihnUNErM7W1KNW4kjGQuhfNW2X9AuQ');"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-text-light-primary truncate group-hover:text-primary">My Hero Academia</h3>
+<p class="text-sm text-text-light-secondary">Kohei Horikoshi</p>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Superhéroes</span>
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Shonen</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-light border border-border-light rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 hover:border-primary/30">
+<div class="aspect-[2/3] bg-cover bg-center" data-alt="Cover of Attack on Titan Manga Volume 1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQjMDS4YhePivJHnyiUkF2fY3HNLkTibbMLJi4dMNRv-g6zi-l5jyRk7FEzDkyU_S-LflEbW0L09_Z03hrrqKY7aLip6t7RwBEOMpZf4uYy1nUWUOAFOmVxWapm04r4QNBi1XHRy2HOKVoRHJrf5qXQN09cR_Qcbzt8gKFQlmWT62AxeVIZUsBHF-MrTTX_26DU8jgR-8WI_7FUwNKQkFsJAe_hNxY0-yVGtFXgS9Ufq4NtIU2AEzv721OI7Nx3z0xuskB0aU1OYM');"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-text-light-primary truncate group-hover:text-primary">Attack on Titan</h3>
+<p class="text-sm text-text-light-secondary">Hajime Isayama</p>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Shonen</span>
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Fantasía Oscura</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-light border border-border-light rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 hover:border-primary/30">
+<div class="aspect-[2/3] bg-cover bg-center" data-alt="Cover of Dr. Stone Manga Volume 1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtzxCCJT_oieFPGjZa-tsLIMnVu5mdVxKXXjGzZ99eXMArFdj68QccPoS13B9FofEC0SqhFvTdosq8fqdb0Ip_y69bvIxIElz01zayY8U90riqTccIt_43LaU2Dk_pYWy3w07q25TbnRegzt7UNQcc7uE_-zju1xfekuIv0kfaTRiJKdtW015vUNuzOQCwE9X04WsiVo_HXXfpQEBHNFcMe6gmmQqbfNpL0mfn5fHpoBmj9Ket7DxVzQZStj91IOa0JnT-juuVzRs');"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-text-light-primary truncate group-hover:text-primary">Dr. Stone</h3>
+<p class="text-sm text-text-light-secondary">Riichiro Inagaki</p>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Ciencia Ficción</span>
+<span class="text-xs font-semibold bg-primary/20 text-primary px-2 py-1 rounded-full">Shonen</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12">
+<nav class="flex items-center gap-2">
+<button class="flex items-center justify-center size-9 rounded-lg text-text-light-secondary hover:bg-surface-light-hover hover:text-text-light-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<button class="flex items-center justify-center size-9 rounded-lg bg-primary text-white font-bold text-sm">1</button>
+<button class="flex items-center justify-center size-9 rounded-lg text-text-light-secondary hover:bg-surface-light-hover hover:text-text-light-primary transition-colors font-bold text-sm">2</button>
+<button class="flex items-center justify-center size-9 rounded-lg text-text-light-secondary hover:bg-surface-light-hover hover:text-text-light-primary transition-colors font-bold text-sm">3</button>
+<span class="text-gray-400">...</span>
+<button class="flex items-center justify-center size-9 rounded-lg text-text-light-secondary hover:bg-surface-light-hover hover:text-text-light-primary transition-colors font-bold text-sm">8</button>
+<button class="flex items-center justify-center size-9 rounded-lg text-text-light-secondary hover:bg-surface-light-hover hover:text-text-light-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</nav>
+</div>
+</section>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Biblioteca Personal Anime</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+    </style>
+    
+<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#19e0da", "background-light": "#f6f8f8", "background-dark": "#112121"}, fontFamily: {display: "Plus Jakarta Sans"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}}}};</script>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#181411] dark:text-background-light">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[1280px] flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f2f0] dark:border-b-[#3a2d21] px-4 md:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-[#181411] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_330)">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_330">
+<rect fill="white" height="48" width="48"></rect>
+</clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-[#181411] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">Biblioteca Personal Anime</h2>
+</div>
+<label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full">
+<div class="text-[#897261] dark:text-[#a19083] flex border-none bg-[#f4f2f0] dark:bg-[#3a2d21] items-center justify-center pl-4 rounded-l-full border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-[#181411] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#f4f2f0] dark:bg-[#3a2d21] focus:border-none h-full placeholder:text-[#897261] dark:placeholder:text-[#a19083] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Buscar..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#181411] dark:text-white text-sm font-medium leading-normal" href="inicio.html">Inicio</a>
+<a class="text-[#181411] dark:text-white text-sm font-medium leading-normal" href="Catalogo.html">Explorar</a>
+<a class="text-[#181411] dark:text-white text-sm font-medium leading-normal" href="perfil.html">Mi Perfil</a>
+<button id="themeToggle" 
+        class="flex items-center justify-center size-10 rounded-full cursor-pointer transition-all hover:opacity-80">
+    <!-- ICONO SOL -->
+    <svg id="iconSun" class="w-6 h-6 text-yellow-500 block dark:hidden" 
+         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.364 6.364l1.414 1.414M4.222 4.222l1.414 1.414m0 12.728L4.222 19.778m14.142-14.142l-1.414 1.414M12 6a6 6 0 100 12 6 6 0 000-12z"/>
+    </svg>
+
+    <!-- ICONO LUNA -->
+    <svg id="iconMoon" class="w-6 h-6 text-white hidden dark:block" 
+         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path 
+         d="M21 12.79A9 9 0 1111.21 3a7 7 0 1010.58 9.79z"/>
+    </svg>
+</button>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate hidden sm:block">Añadir Libro</span>
+</button>
+</div>
+</header>
+<main>
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 p-4 md:p-6 lg:p-10">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-[#181411] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Mi Biblioteca</p>
+<p class="text-[#897261] dark:text-[#a19083] text-base font-normal leading-normal">Tu colección personal de manga y libros.</p>
+</div>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 p-4 md:px-10 overflow-x-auto">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white pl-4 pr-4">
+<p class="text-sm font-medium leading-normal">Todos</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f4f2f0] dark:bg-[#3a2d21] hover:bg-primary/20 dark:hover:bg-primary/30 pl-4 pr-4">
+<p class="text-[#181411] dark:text-white text-sm font-medium leading-normal">Leyendo</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f4f2f0] dark:bg-[#3a2d21] hover:bg-primary/20 dark:hover:bg-primary/30 pl-4 pr-4">
+<p class="text-[#181411] dark:text-white text-sm font-medium leading-normal">Pendiente</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f4f2f0] dark:bg-[#3a2d21] hover:bg-primary/20 dark:hover:bg-primary/30 pl-4 pr-4">
+<p class="text-[#181411] dark:text-white text-sm font-medium leading-normal">Completado</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f4f2f0] dark:bg-[#3a2d21] hover:bg-primary/20 dark:hover:bg-primary/30 pl-4 pr-4">
+<p class="text-[#181411] dark:text-white text-sm font-medium leading-normal">Abandonado</p>
+</button>
+</div>
+<!-- SectionHeader -->
+<h2 class="text-[#181411] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 md:px-10 pb-3 pt-5">Añadidos Recientemente</h2>
+<!-- ImageGrid -->
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4 md:px-10">
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'Jujutsu Kaisen'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmkDLroqsrXTe9lYf3zXawtsULhuvvsi_uTLxc5bDbUyzdfsN_IypntVZ2CBZhU6PbJC0ehjlRybSCBSm__F028CHZquF3HTXrpr-2L3vTokZuQmnH_d_Q4oEt5dPE381skeqZsxycq5c4djfl6fnZArA_SR-lGP3LdhZpEAhC_rNLMoA6_sNkOvpM2iEHgjT9LduJGhd_WXbkPnJcaJexGMv1sw-iuV4fW_3dDLObaar0akMhEfnxI8cHHhMNd9bMOUtDUbsbDx4");'></div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'Chainsaw Man'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJPKCCBS11A52rmWeJQ71HblB84-cAqSfKjHYyJUBbmtI_OmLcWGmF5XVo_lCpVgNGbHyB6Klh7IhreW8rUMsdmKKCBPipQouZbV7_-mf-hA0sRC_V0bJMjs_Ss1MRN7XlphSNnU17UHp2ljm-NeGCGgJhxNCI4kMjJqix20E6qCWvNthpJsKnCCJLmerlnBoA7QN7eaQAXlxT2I6-ZANeZ6WrJLasmew6HtCMSPP2VAkJDU2AzrX4XGRTI5jfPlymuPMhZW-LZwY");'></div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'Attack on Titan'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkby1sw4dn0l5sRBXEvT8uvsVYc9GlzHnUYOrwhLSy9VVjw4M4-ezHYNtPbbsKuZ1DbH0EPoapb5LZDkolKga2YTrriKPtHHVq3CAO7SkTWlG5YdQaRM0MhDCFD89oRrAJoa4aRi9u2zroYC4_CprrC2nR3BWfzJRRCF8Hlh4xN8BQ18JF6xMBrCn6MRp0dNAAm4HbCswf12nBdnUTtqT57JriO3JodLTc83aa7smnj8rpjNikDlFSu0vdMXuiXzxbDpMx260nrMc");'></div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'My Hero Academia'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8FCxCQ8YxYD05kBqXAFgt-jhn1fp9x47aixEy2kI7giL5f9mCph1ppybdfzoXtY3f6GlOjPOxnZRZcdgPrzKQn5K8yzDAMTa7ommg6i8-3a8tFwb2qbcTz6UtD1s9JpQZmdlpWQkSzSrYpAZ8wuW12BrUYHF3Dd-KJhy-GR5iLsxWb34QoGnFTkYsG_1L7TvIjiVMcQ_S13OfjW4umrA9uzBLS9wmu6yxt-GlhjMB3_WyhqFDt-4PqzWG0cm81dDfOt7KsB4w06k");'></div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'Demon Slayer'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCr2ugIHrbwGMQk2R00q09mh1WnbNH17CDQLJdEvmh25-vzJdoDnCMe3qWB5qSP85lAPu5b-XI5cWNgG-3R8d0SnAmzv7NqSGAWvQ0loDuNxRZGpFMX4Ly7pdr09j-V20JdxYYVIdtXFSOycz6NlU4Ra6bZ8qQoUSTrx7ma7wOUOd61t_YiTUqcj8IsHvC57J-_5FmxnAUHLd5fTuC_ouiS-1n0S7yYQkU2xF_mMqe-_qw_J3zDlfXHeqrrZgcfMm3W71i2h-qB_0o");'></div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'One Piece'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMsf6SoMZ4Sg68L2hOCEilqk_lE-2pyqM2_6MgilVg678_uAO_nUA4xweyPZffX3B-okZzPE8ET6v3XC-NcjAyWaWFIzceGykJGjGhp2-VtM7B6Z2tdXj8fJMuAfggRdCVQMkoAG4e0-SwrmE-3xmSbm5bKlFlKrqi4VfO7jVid1_OH7eVRhJoLKygztvGiLmij99tKK8iif9Aqwd07lnhm1sON4Lf_pBVlfzJkjIclnP4qMshOW0E-I_hVvpeiX_-yDZdHomBwH0");'></div>
+</div>
+</div>
+<!-- SectionHeader -->
+<h2 class="text-[#181411] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 md:px-10 pb-3 pt-8">Tu Lista de Pendientes</h2>
+<!-- ImageGrid -->
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4 md:px-10">
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'Berserk'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8RqeyN12TBRppkEDpe_NPeF2Ol1fiewJNJ3e-2NzJs368lrhpeKEioPK-IGVSbMTckCxYAIiqRb5aTq8f10j-EmLbW-lI8IA-CP3aSRnCYRIWxz1UVZGlC_WklWnclMGjs0-mG2-ggU2qmu4DBB6J6GElB1H9G8LNos6wWr752u5FuadrAgs5PTEAiIe4iBHauRLfr-KCE4Me1YAlJjIKy08f-SpAAUwdKsF4eJvuVDm32UWKNmaiQ0aAOGaYSJHrvtEhSPhecCc");'></div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'Vagabond'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPkvZQ61OLsEp5o_3BJyzzZ0PEyl-YrdkJR-MCMlxhHvxFXRAKWnPi_qmcOb6kuQ9qWZkkEeEKPVqj4UpgjVy-3wR8iG0spLzapqe7CxRp3JX5UxL_TibdjJYARS37cfVB6To71Bo54VvC9DkravL0nNRRFbGXCcQnrJ3RdTmQJOrkegqm1z2NU0QL-nyypbvFmBQKjHxCTvX6AJPo1L26X9cjqHatKWzuofb46cONoWiuP7fv_LN-u3aa703umzk3m4hUSJuKp0U");'></div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'Vinland Saga'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_PbxXA-Y5JfbAEumHKAoky6zZDHX8zh2w2fkaYp95kQqjMJf0Q41-vDgwmfOmnw590dZZ0DyrmHaNl3v4kzrzX2AFh6F-RyNmUtKu-g0SAH8q_vrBOh44DcBP_6h1CDRkIro32QqE43DfB9jqxILjb2X5RdLev5gbV7q09hnLI_fVGBCYvXkp0VLxkpofOGy_WSW8S0FBGzzbuv4ZeS6tduH3aLyOI9O4_SbdWi9FWxyASA293YpzYJmCa6xx97O8yFY_DzhiT8I");'></div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'Spy x Family'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnp53v8LAZDAtPJazxz55ly0sdPeZE3EBO6vW8fwLT_j9xe6qEm1JJgbexJ1UBfls-LGjh1rL6YLSTQZs9KlPoQLEsoOqdIukGbV_SFZ3dVeX2rtpvRkW6IaQSz36G-dtUrqHIL5FoxSDuhqipUULVV1Sd3ncsjTH5t44iMvmsevh3mwdAbiX1z3s1UqDohD2kJUtI90Q_LqZ9hIL_UZXmNmPIh-WSZcUxU2mkPr2YQTqnPelao2g0Ie-2GjV-ou-qcxFexFbznpY");'></div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'Tokyo Ghoul'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKMZvKZe99bbsRg7N4L7mrplFWGbyXYYLPgiKIqdlQyYfS6ZXLAeURC1BqsqPNPaBO1wIWjwnhcSHicSkp3CioLtcpC5YWoR9x7QvYooGJn3tyxjSQBxoh6Z9irsQPdohzNO3tiwlKJYYsq8iSqL4y-6wJhDKvq6JUT9TVljLw-WouarP1EDhIkcwHyGIf-7RQsfm1XTevpZR5U_1-dUyjeuCpXgm7yZPKBL97QE7lfmKM_aUgqTiiQuZciYwVzRAk7-wDYpHRqXM");'></div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg transition-transform duration-300 group-hover:scale-105" data-alt="Cover of the manga series 'Naruto'" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBubzZ7abB8xFY0ooqTBpHfXNTib7LAhOc5sHQgCwb9hd7_dN72Yq_iRg_4_55dNUjKOi_x6_J03eA1E3joSkL7jgpkPpg3Q7vYRHYxa4LSn3S3454rNuuq0FXjlHCwFiccEBTGF8F6aPY154oG3JNJrW0QBBnPWJC5llTpqbMIcZghzmTgLdaNL-6N8yRWjQ3c2VyYn065HaC791wV96ROkk2apcpmniqKNTHjejEKQOAd2CjW01GPYzdxWsXandgkj4QCycUN15I");'></div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

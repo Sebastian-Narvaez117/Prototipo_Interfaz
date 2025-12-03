@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catálogo Anime (Mangas Populares)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#47cfeb",
+              "background-light": "#f6f8f8",
+              "background-dark": "#111e21",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-screen-xl flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-800 px-4 md:px-10 py-3 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-gray-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-9h4v2h-4v-2zm-2-3h8v2h-8V8z"></path></svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Catálogo Anime</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full">
+<div class="text-gray-500 dark:text-gray-400 flex border-none bg-background-light dark:bg-background-dark items-center justify-center pl-4 rounded-l-full border-r-0 ring-1 ring-inset ring-gray-200 dark:ring-gray-700">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-gray-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-inset focus:ring-primary border-none bg-background-light dark:bg-background-dark ring-1 ring-inset ring-gray-200 dark:ring-gray-700 h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Buscar..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8">
+<div class="hidden md:flex items-center gap-8">
+<a class="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="BusquedaAvanzada.html">Busqueda Avanzada</a>
+<button id="themeToggle" 
+        class="flex items-center justify-center size-10 rounded-full cursor-pointer transition-all hover:opacity-80">
+    <!-- ICONO SOL -->
+    <svg id="iconSun" class="w-6 h-6 text-yellow-500 block dark:hidden" 
+         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.364 6.364l1.414 1.414M4.222 4.222l1.414 1.414m0 12.728L4.222 19.778m14.142-14.142l-1.414 1.414M12 6a6 6 0 100 12 6 6 0 000-12z"/>
+    </svg>
+
+    <!-- ICONO LUNA -->
+    <svg id="iconMoon" class="w-6 h-6 text-white hidden dark:block" 
+         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path 
+         d="M21 12.79A9 9 0 1111.21 3a7 7 0 1010.58 9.79z"/>
+    </svg>
+</button>
+</div>
+<button class="flex md:hidden max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-gray-200/50 dark:bg-gray-800/50 text-gray-800 dark:text-gray-200 text-sm font-bold">
+<span class="material-symbols-outlined">search</span>
+</button>
+<a href="perfil.html" class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjdR3dWwIqtkTahCRDa_Faw7I_AX5yYO_5-IO7xz-2u5FYpsZDSXEIyuMLTxIPG-bO6a8JpYLfngfT6v93NpUhmSc0EUf1sBrBeVMty41LfNDLyPBwRPXztW_kSIIcOxejEnolLNsL8c_pIRtBGdEs8-T-D-4iqY7cNP1twust5DwGZV1Q5F-5Dptlcx2Gn1mbZYS2CHcus_eyp_aqhya2o7DyzrA4ND7sUgRTCkZh7ZcX92dlD8SDeFMxUexpRXrBf3rZxPAPsys");'></div>
+</div>
+</a>
+</header>
+<main>
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-8">Shonen</h2>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4">
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga Chainsaw Man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAu0YlUcjkMnMW_flKEseCiIxwh3hzKi1lUtUOt40uP7g9vJBO9CljMjxKd8XPD-Gyb3SQhyQvQg6qmMn3UAracP24exD0fxKf0rUh3ZWfkL9xlvdzbEC-IGuQYErovNSk_G_S2o6ES8-lLovwCVmT9EyfHz79pARL5F9TlReUmf9wjWytmOt0iYxLqa6BBiCoSorswfOeqK0q9IrVhr2nIFBf6qm5qlpHFmz5Ry88FZDXhN8z1UuYlT1OkYOF2bwPo73QQRLdEXmM");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Chainsaw Man</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Tatsuki Fujimoto</p>
+</div>
+<a href="detalleslibro.html">
+  <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+    <span class="truncate">Ver Más</span>
+  </button>
+</a>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga Jujutsu Kaisen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6CTRD6hZ4r2TpNgmMP_D8OvvH84T2WsHjd7Zm5FSioU1a_68GEHrfMw6XEYeXV0f2opsjYu1-sZF5g0prbVAyEUsb5CNkHW3LtJdJbyNq3J_fN-Jwi4b6EnLzmapTz-94R6VVgN6Mx008ujYOAN9V9gKWcZ_xfZQVGrMbEIoTY4vZ_0HmnD_Ws7j7Ukx3q9kEmsUCF0IIDRzZePGhMMxtO9C62gsglysFzRKrW3-OYdvOw9RWcPgsDjRYurMfJKX2BSS4AaP9rJM");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Jujutsu Kaisen</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Gege Akutami</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga Attack on Titan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDB31no75lV505Bri7kzm44GddrfChzVBK-IEGi41hYBVBVxUdq3uushij07ZyrYi3M7zdPZofwIovY22xF8QkQVHcuIBnW6Q06fgEYGAJpbtn57KeD0U1vTcQbgc2Y09B3SaPLsplF8xQ5QHuH37SzTlahWhlv2CwoptLI5HVqx8tGKwVZsObBKdURdUw4WBlYNJS-H0YMu7v_3Q1IOI7h2gB7abzSQTgkXVinM3T5PsNsD-GDktAnf3HBN8Ui6nDtTnyA8g6WNfQ");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Attack on Titan</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Hajime Isayama</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga My Hero Academia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTTzJ50-QeRU5rBCJuli4w8yFVaz4n8htFjJACBIf9Ve46Y8PJlMo1NZrmxrLBX_Rb-50WR-PTtfRE43LPUzKHk8JDv5KWRyMwsG2PqvSVwwo_tE3b0Pds5B9JaDiBR9pqf-ZQh06_5OC6t3lJPFjwpLb5M21JDwuxCF9fbVBCHg6GPnRb5Hpfy4wdUn3-35IFrMCAgXrnmqfNzdwjjD3LnS02dvL9nA71qiXGJG4i18r-OAxf0Mmgup550QoNj_93k15VPXlBVc8");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">My Hero Academia</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Kohei Horikoshi</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Isekai</h2>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4">
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga That Time I Got Reincarnated as a Slime" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYiizId7G0V71FEbKWfRCZatqtC18qpeD5-5JkKaLZZ78JSmEnWir249y1CvKYnuTu9P8f0Q4ZLYmeK5A43dQLweaIhZ4YiqXnZr7r-4ku3ufUD3IqVcw-6dS-GeSuJCzYy217YLTp_78EC281JwHJYr6Jt6Wf5hxZRBajwVudZvxfAM4BX0CA8f1hJmW-lUdHd5hEuTNNy0yVFk_TjXCb-bsynyQ_9qQhiyB-Zk2m6-uPfSuJC7SBBjafFLjmLAF2UpDD88N4J98");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Reincarnated as a Slime</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Fuse</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga Sword Art Online" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNMawj7iQF3Rvc_qaRL23BiFHa-QTmYBhBiX8MOXVgYGZ4su6upByxg20-U_ppCuwQvNj3Ni2ZZ4s2GpHkrVHEMyM3Mn3RMEAASyNWPn5ZdPTDUYvaZ6aC1EI31XzRnplXNCtgoakFCXanX2sbn5hHUZ659caysueAqpsltHCPnI8eoQaUyEDmyAzrRBbSUUNvV1-xk1lrjxkAoW6pfqrUuhyuRCkNLQ4RDgbWu6KP1SWaqmF4PIWywbfHPUWvnfYI_ROFbktRVfw");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Sword Art Online</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Reki Kawahara</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga Overlord" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCiE4h6o4JZnaRpEoVOHiE2BJx84I2x-QjyosZEg8hCHvHF70WJpwLkxH_1RPafQhkGBegEuIG9xio2blvfKLDNSxfGNwk8ShWJP1G6GiP0H88n5QzFTr0TnDfHT3rT-tQy1zbpGOB09Wn6xgGTR7d6MGcEHDoQSBMSqo86-JNnUi25aGj5IjJP1E9YO1OhJc5XoMCwLkgAhqi4iRHZxa7CEx4d7gXUO2EyRaSFhG4ME74vzA4vhOoSmmwlw0nsHqIxSovakiUQ3ik");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Overlord</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Kugane Maruyama</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga The Rising of the Shield Hero" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkl4tl2o_bxYSk-5u0RsCdzdzRu7yy16qIAskKNg1i1ZbgVGBdQxY0MFcB_CS5bl7kD5P7MaAk00JVXxBV-aHa7qltqfPEMCGAF2qOMf82joszWxPAe996GFVffPii4VxemYDWBUvsOxna3o2XuV-as4i7G37TzmZ0hQrp_kjzf8C4mDFXUNYCV_FYV-XcD-tVfw4h5Q5-8L4VLGbDm23-MHNtdRGerQyeQ0zuJAiMhjT_d9cI7-9PCOpREMglOjw4xc3ewfsqtvU");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">The Rising of the Shield Hero</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Aneko Yusagi</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Deportes</h2>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4">
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga Haikyuu!!" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5DpG4k9rVBo7vVHwuag9c3GtRKvrfuEfAXrTwj2O7yxzTUx8X42KhSyWRPxxyRvhHxmiHA1jKq9cRKWi0e-FTRKEtebqavjHVzOvIyi1nfa0_2F1PCmqR5i8e1Mm23zNF_FdwHJJBLMod_e4pFOozYRr3FkIj5pnczN-S-IIui74CqAzpsCUxoCxXksmpcSk8tqBaE7KYX-WL6gkyKnT6QOaX_hBftq79kQg8DC-fv0yv_zba_WHUZUlkhI7Cqt_cXYdbjTCS8IU");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Haikyuu!!</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Haruichi Furudate</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga Kuroko's Basketball" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoMt9GD9a6C7V_TsNn58Lik8gW5Mc-WH-oXRP56VnEwHSgTdrsklIiAxY4coqi4ZcpoLsGEXNan3Wzlc5974fv5qGxHdQuTESmAdriC7te24eWRF69iium33pFqosBNGJbz0yIGsGD4ZYD_vC5MpgvhfZyCkwKTB1XU1-gQ8BFfp_kYjYzVfeX9Huk7QzL1SsyskgfrEGAwFbRNbv0gpJu93age2erejDARPigJ0kJptEJbYzExPm6uPL-mRoSjTFffRepvSLbJi4");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Kuroko's Basketball</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Tadatoshi Fujimaki</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga Yowamushi Pedal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAc4ZZWLNbqxsxIOErCNk39FpZYEehDUdfmtVaLA38bpr5AOFHezwLWlB0pCwpIAAWJvYDZJH6s0l5RPV_zpjrCbHfFpJP-mqGjmhKadyXjPtFvqqxRDo0lY-qPk97-2qtqMyan7jPTnj3R-SUuPGwytkJ4Cqo7yo97UO6k9rGCKOp3oHhgTTxHeQdxdS-Ry9lOMtnk5tQzRXl3DicIK1VcoICdfYeFv6IQvPlhLZ9wW4P8Fmbo3VnWYAJoww3O-q2AWO7H7MgKjY");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Yowamushi Pedal</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Wataru Watanabe</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark shadow-md dark:shadow-none dark:ring-1 dark:ring-gray-800 min-w-60 w-60">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-t-lg" data-alt="Portada del manga Blue Lock" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_ZbZ0muv72A5nNI2WZ3EgdU8nDWntS-aahLYUvHR5CDgCvS80_n4PnBx_NUu23lvlchMeNbhrZL9JEy1IDrhKKyMiypQcjypmKsODsyudPUE5PlAHafEkIcY2AtZzzrioy_ohKYo2qKh1RzJ3a77KE0UISeEZNWwp-vm7L7SYIyiIpYSEeq7MERrO5wV8GZTwNdgYynGGFoV9UC_5wxGaz77WUJkwzljE6HAtEnsdfJCgONKxskZ66IqS8_fQA6JlqOYbapkblQ8");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Blue Lock</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Muneyuki Kaneshiro</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Ver Más</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

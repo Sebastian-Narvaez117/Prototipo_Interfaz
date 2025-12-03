@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lector Digital Anime</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+    <script src="script.js" defer></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#47cfeb",
+              "background-light": "#f6f8f8",
+              "background-dark": "#111e21",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<link href="style.css" rel="stylesheet"/>
+
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="mt-4 flex h-16 items-center justify-between rounded-full border border-gray-200/80 bg-white/80 px-6 shadow-sm backdrop-blur-md dark:border-gray-700/80 dark:bg-background-dark/80">
+<div class="flex items-center gap-4">
+<a class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10" href="detalleslibro.html">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">arrow_back</span>
+</a>
+<div class="hidden sm:block">
+<h2 class="text-sm font-bold text-gray-900 dark:text-white">Crónicas del Zorro Espectral</h2>
+<p class="text-xs text-gray-500 dark:text-gray-400">por Kaito Tanaka</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Añadir a marcadores" class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">bookmark_add</span>
+</button>
+<button id="themeToggle" 
+        class="flex items-center justify-center size-10 rounded-full cursor-pointer transition-all hover:opacity-80">
+    <!-- ICONO SOL -->
+    <svg id="iconSun" class="w-6 h-6 text-yellow-500 block dark:hidden" 
+         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.364 6.364l1.414 1.414M4.222 4.222l1.414 1.414m0 12.728L4.222 19.778m14.142-14.142l-1.414 1.414M12 6a6 6 0 100 12 6 6 0 000-12z"/>
+    </svg>
+
+    <!-- ICONO LUNA -->
+    <svg id="iconMoon" class="w-6 h-6 text-white hidden dark:block" 
+         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path 
+         d="M21 12.79A9 9 0 1111.21 3a7 7 0 1010.58 9.79z"/>
+    </svg>
+</button>
+<button aria-label="Más opciones" class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">more_vert</span>
+</button>
+</div>
+</div>
+
+</header>
+<!-- Main Content Area (Reader View) -->
+<main class="flex flex-1 flex-col items-center justify-center px-4 py-28 sm:px-6 lg:px-8">
+<div class="w-full max-w-3xl">
+<div class="layout-content-container flex flex-1 flex-col">
+<h1 class="text-center text-3xl font-bold leading-tight tracking-tight text-[#111718] dark:text-white pb-3 pt-6 lg:text-4xl">Capítulo 1: Perro y Motosierra</h1>
+<p class="text-base font-normal leading-relaxed text-gray-700 dark:text-gray-300 pb-3 pt-1 px-4 sm:text-lg sm:leading-loose"> El capítulo comienza presentándonos a Denji, un joven sumido en la miseria más absoluta. Abrumado por la deuda impagable de su difunto padre con la Yakuza, se dedica a la caza de Demonios de bajo nivel para poder subsistir. Su único apoyo y compañero es Pochita, el Demonio Motosierra, un ser pequeño y adorable. La vida de Denji es de lucha diaria y humillación; ha vendido partes de su propio cuerpo para intentar saldar la deuda, y su mayor sueño es tan simple como poder comer pan con mermelada y tener una vida normal. </p> <p class="text-base font-normal leading-relaxed text-gray-700 dark:text-gray-300 pb-3 pt-1 px-4 sm:text-lg sm:leading-loose"> La Yakuza llama a Denji para lo que parece ser un trabajo más, pero resulta ser una trampa mortal. En un almacén, el jefe de la Yakuza y sus secuaces, habiendo hecho un pacto con el Demonio Zombi, se transforman en no-muertos y atacan a Denji. Denji es apuñalado y apuñalado múltiples veces, cayendo muerto junto a Pochita. En sus últimos momentos, Denji lamenta no haber podido cumplir sus sueños básicos. Es en ese instante que Pochita, conmovido por el simple deseo de su amigo de vivir, sella un contrato. </p> <p class="text-base font-normal leading-relaxed text-gray-700 dark:text-gray-300 pb-3 pt-1 px-4 sm:text-lg sm:leading-loose"> Pochita se fusiona con el corazón de Denji, resucitándolo y transformándolo en un híbrido: el Chainsaw Man. Tirando de la cuerda que ahora sale de su pecho, Denji se arma con motosierras que brotan de su cabeza y brazos, desatando una masacre violenta y visceral contra el Demonio Zombi y toda la horda de no-muertos. Su sed de venganza y desesperación se canalizan en una fuerza destructiva. Después de la carnicería, aparece Makima, una enigmática y poderosa Cazadora de Demonios de Seguridad Pública. </p> <p class="text-base font-normal leading-relaxed text-gray-700 dark:text-gray-300 pb-3 pt-1 px-4 sm:text-lg sm:leading-loose"> Makima ofrece a Denji, que ha regresado a su forma humana, una elección brutal: ser ejecutado inmediatamente como un Demonio, o vivir bajo su supervisión como una "mascota" de Seguridad Pública, con la promesa de comida, ropa y techo. La perspectiva de comer una comida caliente con mermelada es suficiente para que Denji acepte sin dudarlo, culminando el capítulo con su entrada forzada a un nuevo mundo de peligro y caos, pero con la garantía de una vida mejor... por ahora. </p>
+</div>
+</div>
+</main>
+<!-- Bottom Control Bar -->
+<footer class="fixed bottom-0 left-0 right-0 z-20 flex justify-center p-4">
+<div class="flex h-16 w-full max-w-md items-center justify-between rounded-full border border-gray-200/80 bg-white/80 px-6 shadow-lg backdrop-blur-md dark:border-gray-700/80 dark:bg-background-dark/80">
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">arrow_back_ios_new</span>
+</button>
+<div class="flex flex-col items-center text-center">
+<span class="text-sm font-medium text-gray-800 dark:text-gray-200">Página 50</span>
+<div class="mt-1 h-1 w-24 rounded-full bg-gray-200 dark:bg-gray-700">
+<div class="h-1 rounded-full bg-primary" style="width: 15.625%;"></div>
+</div>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">arrow_forward_ios</span>
+</button>
+<div class="absolute right-full mr-4 bottom-4 hidden lg:block">
+<div class="group relative">
+<img alt="Avatar de zorro amigable" class="h-16 w-16 cursor-pointer transition-transform duration-300 group-hover:scale-110" data-alt="Avatar de zorro amigable" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKkRlMuVNvcHF2FhO8H8au2BidlVO1KeOCEAjsO6_nQxlNMo4hbcxO79Vpa8VACtNpZvzQYfJzsXqTH_WpzyC34poC9VhEOQ0FqoFGGaYCHLqttAmTd4W78lnXWne-AbftMp_p9R8AOxIdqXXS79CgajGtIQJ473Ylic6otnQEsHy6ZmU5QecpUog0_jc5Eri0r0YTcKZTJQEWogIWHl_bSS2Cj80jn1ZSQJx95EpfYcM40WgXGbquoDyEN3p0MIkwTKTHcwCqXUU"/>
+<div class="absolute bottom-full right-0 mb-3 w-48 rounded-lg bg-white p-3 text-sm text-gray-700 shadow-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-gray-800 dark:text-gray-300">
+                            ¡Usa las flechas del teclado para pasar de página más rápido!
+                            <div class="absolute -bottom-2 right-4 h-4 w-4 rotate-45 bg-white dark:bg-gray-800"></div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfil de Usuario Anime Masculino</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#27d7dc", "background-light": "#f6f8f8", "background-dark": "#122020"}, fontFamily: {display: "Plus Jakarta Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuArRx1CfMImnbWWUI5fVEkIHBwMG8WKUkIN3nFrr_YAXHpEXmg-zA9RlHNP93CUqm17bkEsvV_imeUo-BXcDqbpLQ0nisvPAlZl8JLAJum3CWc8OD9VcRnMDjCSlEEeybWNEt4lRTG0uOi5JfMtr5GN5JODX1BsrtgQaN1uALg2p1lESHc5v6YDk-dJXS3L6iNoALdF7u1ZGo04G4g1xsiWY6lSrz9nCtu_FphhKmuwbYmV60TEPCSi6MdmFijjHOUwjzSiTHOwOes'); background-size: cover; background-position: center; background-attachment: fixed;">
+<div class="relative flex min-h-screen w-full flex-col backdrop-blur-sm bg-background-light/80 dark:bg-background-dark/80 group/design-root overflow-x-hidden">
+<div class="flex flex-1">
+<aside class="flex h-screen min-w-[250px] max-w-[250px] flex-col justify-between border-r border-slate-200/50 bg-white/70 p-4 dark:border-slate-800/50 dark:bg-background-dark/70">
+<div class="flex flex-col gap-4">
+<div class="flex gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Logotipo de HikariReads" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3bK9tQRO9EqbPwX8h9t9rhGCX9lhM_OHE2BBqyje6qANXbOrT42Cxp9l2lBtX8mr-tdCeYn5hCJE6qL8fwjTbFL6SgLSKH5M0UNj8iOxy8bO2jpQzbx-QK0xMKvhqTQHR4rpsz6FNuUkHLVrcUaLVo3zznRSLBVN88oqzkvJZYcDBhImmZcX-vMA94phqe5cUPyrEawQ0l4LX1nd35nHWFJg_WcOf-WDpUQSDC5LHlOB6GAaOSyRRNJffhL4TYhkl8kI3N2-6lpE");'></div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-base font-medium leading-normal">HikariReads</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Tu Rincón de Lectura</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200/50 dark:hover:bg-slate-800/50" href="inicio.html">
+<span class="material-symbols-outlined text-slate-800 dark:text-slate-200" style="font-variation-settings: 'FILL' 0, 'wght' 300;">home</span>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal">Inicio</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200/50 dark:hover:bg-slate-800/50" href="Catalogo.html">
+<span class="material-symbols-outlined text-slate-800 dark:text-slate-200" style="font-variation-settings: 'FILL' 0, 'wght' 300;">explore</span>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal">Explorar</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 dark:bg-primary/30" href="Librosguardados.html">
+<span class="material-symbols-outlined text-primary dark:text-white" style="font-variation-settings: 'FILL' 1, 'wght' 400;">book</span>
+<p class="text-primary dark:text-white text-sm font-medium leading-normal">Mi Biblioteca</p>
+</a>
+<button id="themeToggle" 
+        class="flex items-center justify-center size-10 rounded-full cursor-pointer transition-all hover:opacity-80">
+    <!-- ICONO SOL -->
+    <svg id="iconSun" class="w-6 h-6 text-yellow-500 block dark:hidden" 
+         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.364 6.364l1.414 1.414M4.222 4.222l1.414 1.414m0 12.728L4.222 19.778m14.142-14.142l-1.414 1.414M12 6a6 6 0 100 12 6 6 0 000-12z"/>
+    </svg>
+
+    <!-- ICONO LUNA -->
+    <svg id="iconMoon" class="w-6 h-6 text-white hidden dark:block" 
+         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path 
+         d="M21 12.79A9 9 0 1111.21 3a7 7 0 1010.58 9.79z"/>
+    </svg>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="truncate">Subir Libro</span>
+</button>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200/50 dark:hover:bg-slate-800/50" href="#">
+<span class="material-symbols-outlined text-slate-800 dark:text-slate-200" style="font-variation-settings: 'FILL' 0, 'wght' 300;">settings</span>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal">Ajustes</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200/50 dark:hover:bg-slate-800/50" href="#">
+<span class="material-symbols-outlined text-slate-800 dark:text-slate-200" style="font-variation-settings: 'FILL' 0, 'wght' 300;">help</span>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal">Ayuda</p>
+</a>
+</div>
+</div>
+</aside>
+<main class="flex-1 overflow-y-auto">
+<div class="p-8">
+<div class="rounded-xl border border-slate-200/50 bg-white/70 p-4 shadow-sm dark:border-slate-800/50 dark:bg-background-dark/70 @container">
+<div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex gap-4">
+<div class="relative group">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-32" data-alt="Avatar de chibi del usuario Kaito_Kun" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAETQaY7AjkeM-PQ_JvbdA0ilUir-ByBWvF2s1DJ11Oa1re8F_2Q-KXGo1TQ-oz0M2mC_4aFM2WL7C0lUylTosdhaJ-ob8wYE_9lcDlnPP9EEVJVa4OzwiUxub2VUrThD32w2n-jy-hcztky1e7aK3LVkTeqyB25MfYn65eVfvs3oK8p5A58ifw3BweP9SPL0UJupJnlwis6H9sk6ar48ZQSDR2YRbY28TdQGLW-Z0P6xq1mpMLEPQpdNKt7mkLuR2puftk4o-_LMM");'></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-white text-4xl">edit</span>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Kaito_Kun</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">Forjando mi propio camino, un manga a la vez.</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">Se unió en Enero 2023</p>
+</div>
+</div>
+<div class="flex w-full max-w-[480px] gap-3 @[480px]:w-auto">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-200/80 dark:bg-slate-800/80 text-slate-800 dark:text-slate-200 text-sm font-bold leading-normal tracking-[0.015em] flex-1 @[480px]:flex-auto hover:bg-slate-300/80 dark:hover:bg-slate-700/80">
+<span class="truncate">Editar Perfil</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] flex-1 @[480px]:flex-auto hover:bg-primary/90">
+<span class="truncate">Añadir Amigo</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<div class="flex border-b border-slate-200/80 dark:border-slate-800/80 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary pb-[13px] pt-4" href="#">
+<p class="text-primary dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">Resumen</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent pb-[13px] pt-4" href="#">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-bold leading-normal tracking-[0.015em] hover:text-primary dark:hover:text-white">Amigos</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent pb-[13px] pt-4" href="#">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-bold leading-normal tracking-[0.015em] hover:text-primary dark:hover:text-white">Listas de Lectura</p>
+</a>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200/50 bg-white/70 dark:border-slate-800/50 dark:bg-background-dark/70 shadow-sm">
+<p class="text-slate-800 dark:text-slate-200 text-base font-medium leading-normal">Manga Leídos</p>
+<p class="text-slate-900 dark:text-white tracking-light text-2xl font-bold leading-tight">124</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200/50 bg-white/70 dark:border-slate-800/50 dark:bg-background-dark/70 shadow-sm">
+<p class="text-slate-800 dark:text-slate-200 text-base font-medium leading-normal">Páginas Leídas</p>
+<p class="text-slate-900 dark:text-white tracking-light text-2xl font-bold leading-tight">36,890</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200/50 bg-white/70 dark:border-slate-800/50 dark:bg-background-dark/70 shadow-sm">
+<p class="text-slate-800 dark:text-slate-200 text-base font-medium leading-normal">Género Favorito</p>
+<p class="text-slate-900 dark:text-white tracking-light text-2xl font-bold leading-tight">Shonen</p>
+</div>
+</div>
+<div class="rounded-xl border border-slate-200/50 bg-white/70 p-6 shadow-sm dark:border-slate-800/50 dark:bg-background-dark/70">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-4">Progreso Mensual de Lectura</h2>
+<div class="flex h-48 items-end justify-between gap-2">
+<div class="flex h-full flex-col items-center justify-end gap-2">
+<div class="h-[25%] w-6 rounded bg-primary/20 dark:bg-primary/40 group-hover/design-root:bg-primary/50 transition-colors duration-300"></div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Ene</p>
+</div>
+<div class="flex h-full flex-col items-center justify-end gap-2">
+<div class="h-[40%] w-6 rounded bg-primary/20 dark:bg-primary/40 group-hover/design-root:bg-primary/50 transition-colors duration-300"></div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Feb</p>
+</div>
+<div class="flex h-full flex-col items-center justify-end gap-2">
+<div class="h-[60%] w-6 rounded bg-primary dark:bg-primary/80 transition-colors duration-300"></div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Mar</p>
+</div>
+<div class="flex h-full flex-col items-center justify-end gap-2">
+<div class="h-[50%] w-6 rounded bg-primary/20 dark:bg-primary/40 group-hover/design-root:bg-primary/50 transition-colors duration-300"></div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Abr</p>
+</div>
+<div class="flex h-full flex-col items-center justify-end gap-2">
+<div class="h-[75%] w-6 rounded bg-primary/20 dark:bg-primary/40 group-hover/design-root:bg-primary/50 transition-colors duration-300"></div>
+<p class="text-xs text-slate-500 dark:text-slate-400">May</p>
+</div>
+<div class="flex h-full flex-col items-center justify-end gap-2">
+<div class="h-[30%] w-6 rounded bg-primary/20 dark:bg-primary/40 group-hover/design-root:bg-primary/50 transition-colors duration-300"></div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Jun</p>
+</div>
+<div class="flex h-full flex-col items-center justify-end gap-2">
+<div class="h-[45%] w-6 rounded bg-primary/20 dark:bg-primary/40 group-hover/design-root:bg-primary/50 transition-colors duration-300"></div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Jul</p>
+</div>
+<div class="flex h-full flex-col items-center justify-end gap-2"><div class="h-[20%] w-6 rounded bg-slate-200 dark:bg-slate-700"></div><p class="text-xs text-slate-500 dark:text-slate-400">Ago</p></div>
+<div class="flex h-full flex-col items-center justify-end gap-2"><div class="h-[15%] w-6 rounded bg-slate-200 dark:bg-slate-700"></div><p class="text-xs text-slate-500 dark:text-slate-400">Sep</p></div>
+<div class="flex h-full flex-col items-center justify-end gap-2"><div class="h-[10%] w-6 rounded bg-slate-200 dark:bg-slate-700"></div><p class="text-xs text-slate-500 dark:text-slate-400">Oct</p></div>
+<div class="flex h-full flex-col items-center justify-end gap-2"><div class="h-[5%] w-6 rounded bg-slate-200 dark:bg-slate-700"></div><p class="text-xs text-slate-500 dark:text-slate-400">Nov</p></div>
+<div class="flex h-full flex-col items-center justify-end gap-2"><div class="h-[2%] w-6 rounded bg-slate-200 dark:bg-slate-700"></div><p class="text-xs text-slate-500 dark:text-slate-400">Dic</p></div>
+</div>
+</div>
+<div class="rounded-xl border border-slate-200/50 bg-white/70 p-6 shadow-sm dark:border-slate-800/50 dark:bg-background-dark/70">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-4">Badges Obtenidos</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-20 h-20 transition-transform group-hover:scale-110" data-alt="Badge de Maratón de Lectura" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNbSXFEXMdIV3g1dOOgjXA07Ri51AFmXgFh6KJ7QXhuZ3T95_UNGuJVfKbDvxFNVXmCzk318Pj2b5tukRGvTYr6TIC1Y6FVrLi_HUdfvZqYHAeGjkGrKe1P7RePBg2Xz7eWnSoSYKEwSm7Z50aoJvLJCdgmP1g67M0pZyiNIAbjczMn4iN-G52C8styUAvY5F6ohF1iHdyc9KgBOOyME1iBbT0rio1AbI0mxPrCLdghK76EptAG-A_RdsY70f9u1Hz7gSP6rZdxbA");'></div>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal text-center">Maratón de Lectura</p>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-20 h-20 transition-transform group-hover:scale-110" data-alt="Badge de Explorador de Géneros" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbT1Ikq9kfcWHVDbrW7Kt5Rdq_6Z4WrKSYeuffIaTsj-XktNsG5Y00P5DjzeChx7H7clsPwQ8UZSXxEGjdvz8ATRsc7YqpWe7ff0MQuQYr6GthDmNII1h7TU3-2l3GLMf1KeR2Ws2w87z60bCrpMJoHiQbxGmaXC_d60XkAMk6D6QN91putokW3aUBx7-peWiUXun8CGG0GsiKpcOmY_4G3RzMXOdAnZbmRowJcvJsogXNqf1pneAPPUO8w18k30_qcBUavkiOjDg");'></div>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal text-center">Explorador de Géneros</p>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-20 h-20 transition-transform group-hover:scale-110" data-alt="Badge de Coleccionista de Clásicos" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXI6WOtAMhZmrg3FF-4EWKOmiRLlL5sPl9UkhhFT2iatNj-cF4gIJdW97Y6CUv-6r_g-_bPUzrCgK5YIjtuYy--UUPO05Ys_Kfs-K9eCJrTyVuz_kd2tuawBYfhhh-TolCsyjcfWYgP3IHLJ3b49zMNrnqWayxTais6Iuk2X2OwkAxH-k8j8kicNmgR33S2CSK_IbV1MYtFs0vPBrNIODY8p79BfHQ8ITGSDtctH05nbYqSvIyu9kuf-Z9rKnZvGcumBKkeVjrSZQ");'></div>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal text-center">Coleccionista de Clásicos</p>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-20 h-20 transition-transform group-hover:scale-110" data-alt="Badge de Lector Nocturno" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASIUqhXnsFnx1QuYLm03a6X1kRCg50qmnrAGyJvPscTVQj1ZxVEXbPF0fpXoHLS5Pu2rafWirL9PK4eYzF-hXhLTWiLhrzDli-2jxgHrRrFk5AKayCnidl1W__U7dCxEhrp1YMLCnGhW2L6aRizYDcQd9mAkWvJbT7-D4lMpS0M1zSeBEk1XPPXh89aRo82yr9rHTQeLYvfUn9G-qyVDz22YU0Dj8euGD6jAqirtvFVwL8tcECh1VE6J57Ib5SKPr9srSS7tyg-z8");'></div>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal text-center">Lector Nocturno</p>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-20 h-20 transition-transform group-hover:scale-110" data-alt="Badge de Crítico Literario" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJKyfiRCkAe7QjlqxFrBtkq6S4OKC_r0_tlrTR_hYF6i-sApNs9OObvhiz7-AGUHdskKV4LKOu2-DCQxsV3wcPXYaQbxcVKiU44IxIqXfAcuYpxyBGD_VhoiERVz1LF5Yelp1emVzXRc7A-Q7ktr-_X29y914JWf1gIBVqOcJNpmC0k_qYuaeqcLvzbVTJTgVlIqdTDXe01qZZToWiZlyEvh2R2BuYVc30g4tNt5WbEdqoj5HtErJwnwr4YYuvWIV_-zbYoOrQlx0");'></div>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal text-center">Crítico Literario</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 flex flex-col gap-6">
+<div class="rounded-xl border border-slate-200/50 bg-white/70 p-6 shadow-sm dark:border-slate-800/50 dark:bg-background-dark/70">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-4">Mangas Favoritos</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-[2/3] rounded-lg overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Portada del manga Chainsaw Man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHiHUdWKnzQWr34Q68FUmsLrYCm-iqK7NV-9Qdg9pvDapjRZlV5gpk-7X6qYyI3z9jaPADU6TpchJYF9i1HZT31jscZrMuMHkZsbfTIOwJ49ZjGWMTiFtjAekm3ChK5-0nd-lXwDcaqvx8cBX-Vl3rJas1w_qf1WNy5yMufRwfIJahli_1VBzbMGugSW0wjk57z4-K2BVK9ok3ZCaBEbRyy9TIFnCDJetFHcfCe0n0r3uTBsY1RF8CRVP7sWNfcWNrxLdfMI6_yjo"/>
+</div>
+<div class="aspect-[2/3] rounded-lg overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Portada del manga Jujutsu Kaisen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHQlSZO19yUPMaBYhe9CE2UnN4kDbuMqFPaPHTM7v-nX-9NzdHItkLT9TWisxCXFAdOIhB4mLR_k9bFWxYfQ6E5JXDr-cA7rg8pUWsQHJwfFchyskAHeDL5VcSmEnl_QLTOfr_qolj7-g09GIGsN7X4biBZpdq0BMl15vJbRSdtwvJKS2nFMRcRuGVQuDnBkbafRoaLXF5nv6QKzwoc23DS2Qk9X9-JLzuljJwts-B2XdVObYAny5Z_k_SoISuxGHTT7c5phy8QFw"/>
+</div>
+<div class="aspect-[2/3] rounded-lg overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Portada del manga One Piece" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu7VZ5jhPOy95I4yq_w7j1i9c4YHpkHvM94YdxboGOtLFpeNXH5SkcL11DIbEaO_3pHKhUIcM6F3nurJFnD1Y6HwxFBMs0gkOeKt_sw37y1LdNKXtXApyx6UnvHUqP7MesORJQ-AWRpTn8JXS3ofAyXZhHVXsRc8KOx7xVso-ncbjebJrg3oAmzFCc8CGu4JEQYOGDHJXSuwE7VDbsEimT3EOxpHE7tjyEhByiq1sNnHwcHKWIPnNboKHv9MhneaHzegY2gvvma_c"/>
+</div>
+<div class="aspect-[2/3] rounded-lg overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Portada del manga Berserk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXIXcnyo1a57_a-M3leulQwJaK-tAg1xrJjzzzSNTomSEWl4MbXcByBCfWQI7dc3xnwvtdde4YkLPCa_re4Z-z_8NCqmFXNc8N4Zx7fEnHjkngVxDSdnOtiWlGCvQ6bhiq14_9wYlOM3UidNM9qdp1QZna_Eyeg9AZ0iLXi_xwY5Sa9ty9jPAFRJZO8HJMVeuotp43Ls1uTe0uR1mJtjiZEsi5jMQoIl42T0EEY2cONuvU6pAmcAnUE9i6k_Q5T2ZaMpHTgF8uDao"/>
+</div>
+</div>
+<button class="mt-4 w-full text-center text-sm font-bold text-primary dark:text-primary/90 hover:underline">Ver todos</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

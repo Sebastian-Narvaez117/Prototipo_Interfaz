@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inicio  </title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#47cfeb",
+            "background-light": "#f6f8f8",
+            "background-dark": "#111e21",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden font-display">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f4f4] dark:border-b-background-dark/20 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-[#111718] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<a href="inicio.html">
+  <h2 class="text-lg font-bold tracking-[-0.015em]">Anime Library</h2>
+</a>
+</div>
+<div class="flex flex-1 justify-end gap-4 sm:gap-8">
+<a href="login.html"
+   class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-[#111718] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+  <span class="truncate">Login</span>
+</a>
+
+<button id="themeToggle" 
+        class="flex items-center justify-center size-10 rounded-full cursor-pointer transition-all hover:opacity-80">
+    <!-- ICONO SOL -->
+    <svg id="iconSun" class="w-6 h-6 text-yellow-500 block dark:hidden" 
+         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.364 6.364l1.414 1.414M4.222 4.222l1.414 1.414m0 12.728L4.222 19.778m14.142-14.142l-1.414 1.414M12 6a6 6 0 100 12 6 6 0 000-12z"/>
+    </svg>
+
+    <!-- ICONO LUNA -->
+    <svg id="iconMoon" class="w-6 h-6 text-white hidden dark:block" 
+         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path 
+         d="M21 12.79A9 9 0 1111.21 3a7 7 0 1010.58 9.79z"/>
+    </svg>
+</button>
+</div>
+</header>
+<main class="flex flex-col gap-8 md:gap-12">
+<div class="@container pt-8 md:pt-12">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4" data-alt="An intense anime-style illustration of a character with a chainsaw head, evoking the popular anime Chainsaw Man." style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHyzL_hwLNpxvz8uyDC0tsnbG5mkci7GtFdK5CK8DsiQYTaDVfspDFs5Hfyr6LGpOq5HWplIOnHQ-zDyK1yxa8yTv-qA8-7S8xXfpnqA2YqldVuAwLVyNdFu1WUpJT6rhjebd9p0a-20-jujfXbMCeRIcQoGiEyUQGYK5UGClZlw2hIDuevcgPZigBOUKF4dgwP6W5r0RoYMlsMY9EikY01g9__YgwBjehUyS99ockTvpjpNYlRj4W1n9iy5bJ4-wi1BBWo4KFVEg");'>
+<div class="flex flex-col gap-2 text-center">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                      Tu próxima aventura te espera
+                    </h1>
+<h2 class="text-white/90 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                      Sumérgete en un mundo de historias
+                    </h2>
+</div>
+<div class="flex-wrap gap-3 flex justify-center">
+<a href="Catalogo.html"
+   class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-[#111718] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-primary/90 transition-colors">
+  <span class="truncate">Explorar</span>
+</a>
+<a href="Librosguardados.html"
+   class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-[#111718] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-primary/90 transition-colors">
+  <span class="truncate">Mis Mangas</span>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+<section class="flex flex-col gap-4">
+<h2 class="text-[#111718] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4">Explora la biblioteca</h2>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 p-4">
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg group-hover:scale-105 transition-transform duration-300" data-alt="An anime illustration of a group of determined heroes standing before a colossal titan, referencing Attack on Titan." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlIm8b-jhqqMZbvMZJjpAR3GF0ZfJTiXsCmoaHsuQgvTjsC8Rrw6m1Fr9Nm0EO_gVSajW_Rbks4YFcn0qkKvCbvpwxxQCsTq3Uh-9SdeTXh5IhjeGqJTDWWemb8vz-4O5tq0PS1nH5gp5CEbpnEvNiJWdIaa-UjghsnjYNNyqu1bvxQRrL8UghAgRhBA--5acaeDWXAROKr_EwNRKEVeptZA4ljcF3j0pSQIcPWLeV5U01vlQZhzzz_2iDblwWJp11MYZS2ysl-cQ");'></div>
+<div>
+<p class="text-[#111718] dark:text-white text-base font-medium leading-normal">Catálogo</p>
+<p class="text-[#638288] dark:text-gray-400 text-sm font-normal leading-normal">Explora la colección completa.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg group-hover:scale-105 transition-transform duration-300" data-alt="An anime-style illustration of a character with spiky hair and a powerful aura, reminiscent of a popular shonen series, reading a book intently." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWlgl2G8VjHL8aJbGW9VW-c8lkFKjGAeZCW-1rtpH5RDKwzzALgIQCVmSmOwByv7aHHNGlUhWmW6O2fcvPtLK-M31-z0IRXNI-yIAEPEPSPcJETq0P_RLfFjpRg_JEm5tvirUQTVzD4xSsZX0L7nu_f8iMUTXWUXSSLvBxaklehlt5pftjkS8CUx63LVJP9-VVU0izlhI8vmFk-tPekPu7DY4NpGCJD5aC1IQD464I7k_lHVX2N5RbqwZd7r-DBo9TlMVqTdyByh0");'></div>
+<div>
+<p class="text-[#111718] dark:text-white text-base font-medium leading-normal">Mis Libros</p>
+<p class="text-[#638288] dark:text-gray-400 text-sm font-normal leading-normal">Continúa tu viaje de lectura.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg group-hover:scale-105 transition-transform duration-300" data-alt="A stylized illustration of a female anime character with a determined expression, wielding a sword against a backdrop of supernatural creatures." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBr-ltRwI0bXKBOOEeBtz6YtIEDUXMacoFtvT_Vzl-PIVMxxleX94V3GmyWQP4tqjGVrt91VUBjBpGGn3byS4uJgFTPRQ5TNX_7ou4qh4kgw1IXnhzuhK8LAeRwVQgmxwOJ95qPPFSUsqDAM4KISo8D63VvWh5PK9FA51sr1a8P3yC4GTPjW_tWT9UiFag4BqGQYRDCWJtEsdpHioD_3J60mr2z-IZXr_XGoZQ5UTK5KaK1vQThZ3PkZsc0p3q-Zwq3RdjmzJBdT30");'></div>
+<div>
+<p class="text-[#111718] dark:text-white text-base font-medium leading-normal">Buscar</p>
+<p class="text-[#638288] dark:text-gray-400 text-sm font-normal leading-normal">Encuentra tu libro o autor favorito.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="flex flex-col gap-6 px-5 py-10 text-center @container mt-8 md:mt-16 border-t border-solid border-t-[#f0f4f4] dark:border-t-background-dark/20">
+<div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+<a class="text-[#638288] dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary dark:hover:text-primary transition-colors" href="#">Sobre nosotros</a>
+<a class="text-[#638288] dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary dark:hover:text-primary transition-colors" href="#">Ayuda</a>
+<a class="text-[#638288] dark:text-gray-400 text-base font-normal leading-normal min-w-40 hover:text-primary dark:hover:text-primary transition-colors" href="#">Términos de Servicio</a>
+</div>
+<p class="text-[#638288] dark:text-gray-500 text-sm font-normal leading-normal">© 2024 Biblioteca Anime. Todos los derechos reservados.</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+  // Obtener elementos
+  const htmlElement = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  
+  // Verificar si hay un tema guardado en localStorage
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    htmlElement.classList.add('dark');
+  } else if (savedTheme === 'light') {
+    htmlElement.classList.remove('dark');
+  }
+  
+  // Función para cambiar el tema
+  themeToggle.addEventListener('click', () => {
+    htmlElement.classList.toggle('dark');
+    
+    // Guardar la preferencia del usuario
+    if (htmlElement.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+</body>
+</html>

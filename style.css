@@ -1,0 +1,77 @@
+/* ICONOS */
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* LOGIN background pattern */
+.background-pattern {
+  background-image:
+    radial-gradient(circle at center, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 1.25rem 1.25rem;
+}
+
+/* ==== GENERAL ==== */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Scroll horizontal suave */
+::-webkit-scrollbar {
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #47cfeb;
+    border-radius: 10px;
+}
+
+/* ==== CARDS ==== */
+.card {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 16px rgba(0,0,0,0.15);
+}
+
+/* Botón Ver Más */
+.btn-ver {
+    transition: background .2s ease, transform .2s ease;
+}
+.btn-ver:hover {
+    background: #2bbcd8 !important;
+    transform: scale(1.06);
+}
+
+/* ==== HEADER ==== */
+header {
+    backdrop-filter: blur(10px);
+}
+
+/* ==== BUSCADOR ==== */
+.search-input:focus {
+    outline: none;
+    border-color: #47cfeb;
+    box-shadow: 0 0 5px #47cfeb;
+}
+
+/* ==== DARK MODE ==== */
+.dark .card {
+    box-shadow: none;
+    border: 1px solid #2f3b3d;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #47cfeb;
+}
+:root {
+  --background-light: #d6d9d9;
+  --background-dark: #0d1a1e;
+}
+
