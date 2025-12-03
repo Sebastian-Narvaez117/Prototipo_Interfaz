@@ -37,7 +37,7 @@ Primera interacción con nuevos usuarios, diseñada para hacer el proceso de reg
 - Aceptación de términos y condiciones
 - Opción de registro con redes sociales
 
-![Registro](Docs/img/Registro.png)
+![Registro](img/Registro.png)
 
 ---
 
@@ -50,7 +50,7 @@ Punto de entrada a la plataforma con validación de credenciales y experiencia d
 - Validación en tiempo real
 - Opciones de recuperación de contraseña
 
-![Login](Docs/img/Login.png)
+![Login](/img/Login.png)
 
 ---
 
@@ -63,7 +63,7 @@ Presenta una selección curada de animes recientes, populares y recomendaciones 
 - Buscador inteligente en el header
 - Secciones organizadas por categorías
 
-![Inicio](Docs/img/Inicio.png)
+![Inicio](/img/Inicio.png)
 
 ---
 
@@ -76,7 +76,7 @@ Herramienta de descubrimiento que permite navegar todo el contenido disponible c
 - Grid responsivo adaptable
 - Paginación intuitiva
 
-![Explorar](Docs/img/Catalogo.png)
+![Explorar](/img/Catalogo.png)
 
 ---
 
@@ -90,7 +90,7 @@ Vista dedicada que proporciona contexto completo antes de iniciar la lectura.
 - Acciones rápidas: "Leer ahora" y "Agregar a biblioteca"
 - Sección de títulos relacionados
 
-![Detalles](Docs/img/Detalle.png)
+![Detalles](/img/Detalle.png)
 
 ---
 
@@ -103,7 +103,7 @@ Espacio personalizado donde se centralizan todos los contenidos guardados y en p
 - Acceso rápido a la última página leída
 - Sistema de etiquetas personalizadas
 
-![Mi Biblioteca](Docs/img/LibrosGuardados.png)
+![Mi Biblioteca](/img/LibrosGuardados.png)
 
 ---
 
@@ -117,7 +117,7 @@ Experiencia de lectura inmersiva con controles intuitivos y personalización vis
 - Zoom y ajuste de visualización
 - Marcador automático de progreso
 
-![Lectura](Docs/img/Lectura.png)
+![Lectura](/img/Lectura.png)
 
 ---
 
@@ -131,7 +131,7 @@ Panel de control del usuario con estadísticas y configuración de cuenta.
 - Gestión de notificaciones
 - Historial de actividad
 
-![Perfil](Docs/img/Perfil.png)
+![Perfil](/img/Perfil.png)
 
 ---
 
@@ -149,7 +149,7 @@ Herramienta poderosa para usuarios que buscan contenido específico con criterio
 - Guardado de búsquedas favoritas
 - Resultados en tiempo real con preview
 
-![Búsqueda Avanzada](Docs/img/BusquedaAvanzada.png)
+![Búsqueda Avanzada](/img/BusquedaAvanzada.png)
 
 ---
 
